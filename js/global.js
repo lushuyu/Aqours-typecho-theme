@@ -1,4 +1,4 @@
-﻿//ajax评论
+//ajax评论
 var ajaxcomments = function(){
 	var
 	   $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
@@ -228,7 +228,7 @@ var clickEvent = function(){
     $(".smilies-box").fadeToggle("fast");
   });
 
-//comment-author-info-toggle akina-1.05
+//comment-author-info-toggle aqours
 $("#toggle-comment-info").click(function(){
     $("#comment-author-info").slideToggle("slow");
   });
@@ -344,4 +344,4 @@ $(document).ready(function(){
 	$("a[href*='://']:not(a[href^='"+document.location.protocol+"//"+document.location.host+"'],a[href^='javascript:'])").attr({target:"_blank",rel:"nofollow noopener noreferrer"});
 	$(".links a[href*='://']").removeAttr("rel");
 });
-console.log("%cAkina for Typecho 2.3","background:#5f5f5f;color:#fff;margin:10px;padding:6px;","https://zhebk.cn");
+console.log("%cAqours 1.0","background:#5f5f5f;color:#fff;margin:10px;padding:6px;","https://zhebk.cn");

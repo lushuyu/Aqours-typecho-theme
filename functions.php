@@ -6,10 +6,10 @@ function themeConfig($form) {
 	$headerinfo = new Typecho_Widget_Helper_Form_Element_Text('headerinfo', NULL,'Carpe Diem and Do what I like', _t('头部内容'), _t('首页头部介绍'));
     $form->addInput($headerinfo);
 	
-    $NOTICE = new Typecho_Widget_Helper_Form_Element_Text('NOTICE', NULL,'我很荣幸的启用了Akina主题', _t('公告内容'), _t('首页公告内容'));
+    $NOTICE = new Typecho_Widget_Helper_Form_Element_Text('NOTICE', NULL,'我很荣幸的启用了Aqours主题', _t('公告内容'), _t('首页公告内容'));
     $form->addInput($NOTICE);
 	
-	$headimg = new Typecho_Widget_Helper_Form_Element_Text('headimg', NULL,'/usr/themes/Akina/images/headerbg.jpg', _t('首页头部图'), _t('默认图/usr/themes/Akina/images/headerbg.jpg'));
+	$headimg = new Typecho_Widget_Helper_Form_Element_Text('headimg', NULL,'/usr/themes/Aqours/images/headerbg.jpg', _t('首页头部图'), _t('默认图/usr/themes/Aqours/images/headerbg.jpg'));
     $form->addInput($headimg);
 	
 	$QQ = new Typecho_Widget_Helper_Form_Element_Text('QQ', NULL,'945203919', _t('QQ号码'), _t('自动获取空间地址，并作为全局博主头像'));
@@ -123,9 +123,9 @@ function theNextPrev($widget){
         //第一篇文章，什么也不需要输出
         $html .= '';
     } else if (!$nextResult) {
-        $html .= '<div class="post-nepre half next" style="width:100%;"><a href="' . $prevResult["link"] . '" rel="next"><div class="background" style="background-image:url(/usr/themes/Akina/images/random/deu' . mt_rand(1,7). '.jpg);"></div><span class="label">Next Post</span><div class="info"><h3>' . $prevResult["title"] . '</h3><hr></div></a></div>';
+        $html .= '<div class="post-nepre half next" style="width:100%;"><a href="' . $prevResult["link"] . '" rel="next"><div class="background" style="background-image:url(/usr/themes/Aqours/images/random/deu' . mt_rand(1,7). '.jpg);"></div><span class="label">Next Post</span><div class="info"><h3>' . $prevResult["title"] . '</h3><hr></div></a></div>';
     } else if (!$prevResult) {
-        $html .= '<div class="post-nepre half previous"style="width:100%;"><a href="' . $nextResult["link"] . '" rel="prev"><div class="background" style="background-image:url(/usr/themes/Akina/images/random/deu' . mt_rand(1,7). '.jpg);"></div><span class="label">Previous Post</span><div class="info"><h3>' . $nextResult["title"] . '</h3><hr></div></a></div>';
+        $html .= '<div class="post-nepre half previous"style="width:100%;"><a href="' . $nextResult["link"] . '" rel="prev"><div class="background" style="background-image:url(/usr/themes/Aqours/images/random/deu' . mt_rand(1,7). '.jpg);"></div><span class="label">Previous Post</span><div class="info"><h3>' . $nextResult["title"] . '</h3><hr></div></a></div>';
     } else {
         $html .= '<div class="post-nepre half previous"><a href="' . $nextResult["link"] . '" rel="prev"><div class="background" style="background-image:url(' . theurl . 'images/random/deu' . mt_rand(1,7). '.jpg);"></div><span class="label">Previous Post</span><div class="info"><h3>' . $nextResult["title"] . '</h3><hr></div></a></div>';
 		$html .= '<div class="post-nepre half next"><a href="' . $prevResult["link"] . '" rel="next"><div class="background" style="background-image:url(' . theurl . 'images/random/deu' . mt_rand(1,7). '.jpg);"></div><span class="label">Next Post</span><div class="info"><h3>' . $prevResult["title"] . '</h3><hr></div></a></div>';
